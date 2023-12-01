@@ -8,8 +8,8 @@ public class Video extends Riproducibile  implements IVolume, ILuminosità{
     int luminosità= 0;
     int volume = 0;
 
-    public Video(String titolo) {
-        super(titolo);
+    public Video(String titolo, int durata) {
+        super(titolo, durata);
     }
 
     @Override
@@ -32,7 +32,19 @@ public class Video extends Riproducibile  implements IVolume, ILuminosità{
         return this.luminosità = luminosità - 1;
     }
     @Override
-    String play() {
-        return null;
+    public String play() {
+        StringBuilder finalVideo = new StringBuilder();
+        for (int i = 0; i <= durata; i++) {
+            StringBuilder video = new StringBuilder();
+            video.append(titolo);
+            for (int j = 0; j <= volume; j++) {
+                video.append('!');
+                for(int z = 0; z<= luminosità; z++){
+                    video.append('*');
+                }
+            }
+            finalVideo.append(video.toString()).append("\n");;
+        }
+        return finalVideo.toString();
     }
 }
