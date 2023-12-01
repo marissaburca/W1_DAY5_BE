@@ -36,12 +36,12 @@ public class Video extends Riproducibile  implements IVolume, ILuminosità{
     @Override
     public String play() {
         StringBuilder finalVideo = new StringBuilder();
-        for (int i = 0; i <= durata; i++) {
+        for (int i = 1; i <= durata; i++) {
             StringBuilder video = new StringBuilder();
             video.append(titolo);
-            for (int j = 0; j <= volume; j++) {
+            for (int j = 1; j <= volume; j++) {
                 video.append('!');
-                for(int z = 0; z<= luminosità; z++){
+                for(int z = 1; z<= luminosità; z++){
                     video.append('*');
                 }
             }

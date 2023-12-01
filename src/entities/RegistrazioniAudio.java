@@ -23,10 +23,10 @@ public class RegistrazioniAudio extends Riproducibile  implements IVolume{
     @Override
     public String play() {
         StringBuilder finalAudio = new StringBuilder();
-        for (int i = 0; i <= durata; i++) {
+        for (int i = 1; i <= durata; i++) {
             StringBuilder audio = new StringBuilder();
             audio.append(titolo);
-            for (int j = 0; j <= volume; j++) {
+            for (int j = 1; j <= volume; j++) {
                 audio.append('!');
             }
             finalAudio.append(audio.toString()).append("\n");;
