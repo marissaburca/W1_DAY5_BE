@@ -4,6 +4,11 @@ import interfaces.ILuminosità;
 import interfaces.IVolume;
 
 public class RegistrazioniAudio extends Riproducibile  implements IVolume{
+
+    /*
+    Questa classe è quasi identica a quella del Video, la sola differenza sta nei parametri che il costruttore riceve.
+    Qui ce n'è uno in meno. Ha ElementoMultimediale come nonno e Riproducibile come padre.
+     */
     int volume;
     public RegistrazioniAudio(String titolo, int durata, int volume) {
         super(titolo, durata);
