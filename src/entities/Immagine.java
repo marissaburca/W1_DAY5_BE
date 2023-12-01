@@ -28,9 +28,10 @@ public class Immagine extends ElementoMultimediale implements ILuminosità {
         //ancora nulla nella classe main, vedrò dopo se ho ottenutio il risultato desiderato
         StringBuilder immagine = new StringBuilder();
         immagine.append(titolo);
-        for (int i = 0; i <= luminosità; i++) {
+        for (int i = 1 ; i <= luminosità; i++) {
             immagine.append('*');
         }
         return immagine.toString();
     }
+
 }

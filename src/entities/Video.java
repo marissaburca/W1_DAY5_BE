@@ -5,11 +5,13 @@ import interfaces.IVolume;
 
 public class Video extends Riproducibile  implements IVolume, ILuminosità{
 
-    int luminosità= 0;
-    int volume = 0;
+    int luminosità;
+    int volume;
 
-    public Video(String titolo, int durata) {
+    public Video(String titolo, int durata,int volume, int luminosità) {
         super(titolo, durata);
+        this.volume= volume;
+        this.luminosità= luminosità;
     }
 
     @Override

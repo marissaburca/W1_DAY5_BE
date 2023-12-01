@@ -4,9 +4,10 @@ import interfaces.ILuminosità;
 import interfaces.IVolume;
 
 public class RegistrazioniAudio extends Riproducibile  implements IVolume{
-    int volume = 5;
-    public RegistrazioniAudio(String titolo, int durata) {
+    int volume;
+    public RegistrazioniAudio(String titolo, int durata, int volume) {
         super(titolo, durata);
+        this.volume= volume;
     }
 
     @Override
