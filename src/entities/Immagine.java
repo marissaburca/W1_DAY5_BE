@@ -5,8 +5,11 @@ import interfaces.ILuminosità;
 public class Immagine extends ElementoMultimediale implements ILuminosità {
 
     int luminosità = 0;
-    public Immagine(String titolo) {
+
+
+    public Immagine(String titolo, int luminosità) {
         super(titolo);
+        this.luminosità= luminosità;
     }
 
     @Override

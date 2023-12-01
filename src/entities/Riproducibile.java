@@ -8,5 +8,5 @@ public abstract class Riproducibile extends ElementoMultimediale {
     }
 
 
-    abstract String play();
+    public abstract String play();
 }
