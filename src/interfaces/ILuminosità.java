@@ -1,4 +1,4 @@
-package entities;
+package interfaces;
 
 public interface ILuminosità {
     int aumentaLuminosità();

@@ -1,6 +1,9 @@
 package entities;
 
-public class Video extends ElementoMultimediale implements IVolume,ILuminosità {
+import interfaces.ILuminosità;
+import interfaces.IVolume;
+
+public class Video extends Riproducibile  implements IVolume, ILuminosità{
 
     int luminosità= 0;
     int volume = 0;
@@ -27,5 +30,9 @@ public class Video extends ElementoMultimediale implements IVolume,ILuminosità 
     @Override
     public int diminuisciLuminosità() {
         return this.luminosità = luminosità - 1;
+    }
+    @Override
+    String play() {
+        return null;
     }
 }

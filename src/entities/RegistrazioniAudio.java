@@ -1,12 +1,13 @@
 package entities;
 
-public class RegistrazioniAudio extends ElementoMultimediale implements IVolume,ILuminosità{
-    int volume = 0;
-    int luminosità = 0;
-    public RegistrazioniAudio(String titolo) {
-        super(titolo);
-    }
+import interfaces.ILuminosità;
+import interfaces.IVolume;
 
+public class RegistrazioniAudio extends Riproducibile  implements IVolume{
+    int volume = 5;
+    public RegistrazioniAudio(String titolo, int durata) {
+        super(titolo, durata);
+    }
 
     @Override
     public int alzaVolume() {
@@ -19,14 +20,12 @@ public class RegistrazioniAudio extends ElementoMultimediale implements IVolume,
     }
 
     @Override
-    public int aumentaLuminosità() {
-        return this.luminosità= luminosità + 1;
+    public String play() {
+        StringBuilder audio = new StringBuilder();
+        audio.append(titolo);
+        for (int i = 0; i <= volume; i++) {
+            audio.append('!');
+        }
+        return audio.toString();
     }
-
-    @Override
-    public int diminuisciLuminosità() {
-        return this.luminosità = luminosità - 1;
-    }
-
-
 }

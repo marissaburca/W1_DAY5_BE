@@ -1,5 +1,7 @@
 package entities;
 
+import interfaces.ILuminosità;
+
 public class Immagine extends ElementoMultimediale implements ILuminosità {
 
     int luminosità = 0;
