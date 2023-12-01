@@ -1,18 +1,23 @@
 package entities;
 
-public class Immagine extends ElementoMultimediale implements ILuminosità{
+public class Immagine extends ElementoMultimediale implements ILuminosità {
 
+    int luminosità = 0;
     public Immagine(String titolo) {
         super(titolo);
     }
 
     @Override
-    public int alzaLuminosità() {
-        return 0;
+    public int aumentaLuminosità() {
+        return this.luminosità = luminosità +1;
     }
 
     @Override
-    public int abbassaLuminosità() {
-        return 0;
+    public int diminuisciLuminosità() {
+        return this.luminosità = luminosità -1;
+    }
+
+    public void show(){
+
     }
 }
