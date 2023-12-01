@@ -57,17 +57,21 @@ public class Video extends Riproducibile implements IVolume, ILuminosità {
     @Override
     public String play () {
         StringBuilder finalVideo = new StringBuilder();
-        for (int i = 1; i <= durata; i++) {
-            StringBuilder video = new StringBuilder();
-            video.append(titolo);
-            for (int j = 1; j <= volume; j++) {
-                video.append('!');
+        if (durata > 0 && volume > 0 && luminosità > 0){
+            for (int i = 1; i <= durata; i++) {
+                StringBuilder video = new StringBuilder();
+                video.append(titolo);
+                for (int j = 1; j <= volume; j++) {
+                    video.append('!');
+                }
+                for (int z = 1; z <= luminosità; z++) {
+                    video.append('*');
+                }
+                finalVideo.append(video.toString()).append("\n");
+                ;
             }
-            for (int z = 1; z <= luminosità; z++) {
-                video.append('*');
-            }
-            finalVideo.append(video.toString()).append("\n");
-            ;
+        }else{
+            System.out.println("Numbers can't have negative value. Try again!");
         }
         return finalVideo.toString();
     }

@@ -28,6 +28,7 @@ public class RegistrazioniAudio extends Riproducibile  implements IVolume{
     @Override
     public String play() {
         StringBuilder finalAudio = new StringBuilder();
+        if(durata > 0 && volume > 0){
         for (int i = 1; i <= durata; i++) {
             StringBuilder audio = new StringBuilder();
             audio.append(titolo);
@@ -35,6 +36,8 @@ public class RegistrazioniAudio extends Riproducibile  implements IVolume{
                 audio.append('!');
             }
             finalAudio.append(audio.toString()).append("\n");;
+        }}else{
+            System.out.println("Numbers can't have negative value. Try again!");
         }
         return finalAudio.toString();
     }

@@ -42,19 +42,22 @@ public class Immagine extends ElementoMultimediale implements ILuminosità {
         /*
         So che questo metodo deve tornarmi una stringa e lo assegno come tipo al metodo.
         StringBuilder è una classe/oggetto java che permette di apportare modifiche ad una sequenza di caratteri.
-        In pratica devo immaginare di avere una striga che è vuota, e gli appendo immediatamente il titolo,con un
-        ciclo for appendo tanti asterischi quanto è il valore della luminosità.
+        In pratica devo immaginare di avere una striga che è vuota e gli appendo immediatamente il titolo, poi
+        verifico che la luminosità abbia valore positivo e infine con un ciclo for appendo tanti asterischi quanto
+        è il valore della luminosità.
         Nel CICLO AVVIO IL CONTEGGIO DA 1, altrimenti anche per lo 0 lui appende un *.
         Essendo una classe che ha una stringa come valore di ritorno, faccio un return dell'oggetto appena
         costruito a cui aggiungo il metodo toString.
          */
-
         StringBuilder immagine = new StringBuilder();
-        immagine.append(titolo);
-        for (int i = 1 ; i <= luminosità; i++) {
-            immagine.append('*');
+        if (luminosità >= 1) {
+            immagine.append(titolo);
+            for (int i = 1; i <= luminosità; i++) {
+                immagine.append('*');
+            }
+        } else {
+            System.out.println("Value of brightness not acceptable because is a negative value");
         }
         return immagine.toString();
-    }
-
+}
 }
