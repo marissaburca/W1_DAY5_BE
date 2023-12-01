@@ -17,7 +17,15 @@ public class Immagine extends ElementoMultimediale implements ILuminosità {
         return this.luminosità = luminosità -1;
     }
 
-    public void show(){
-
+    public String show() {
+        //non avevo idea di come stampare tutto su una riga, così sapendo che show doveva
+        //tornare una stringa ho cercato un metodo per manipolare le stringhe. Non sto facendo
+        //ancora nulla nella classe main, vedrò dopo se ho ottenutio il risultato desiderato
+        StringBuilder immagine = new StringBuilder();
+        immagine.append(titolo);
+        for (int i = 0; i <= luminosità; i++) {
+            immagine.append('*');
+        }
+        return immagine.toString();
     }
 }
